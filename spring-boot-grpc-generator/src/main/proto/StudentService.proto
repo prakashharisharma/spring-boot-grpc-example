@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.example.studentservice;
+
+message Student{
+	int32 rollNumber = 1;
+	string name = 2;
+	string dob = 4;
+	double percentage = 5;
+}
+
+message StudentList{
+	repeated Student students = 1;
+}
+
+message Empty{
+
+}
+
+service StudentService{
+	rpc getStudent (Student) returns (Student);
+	rpc getAllStudents (Empty) returns (StudentList);
+}
+
