@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 
-package com.example.studentservice;
+package com.tutorialsdesk.grpc.proto;
 
 message Student{
 	int32 rollNumber = 1;

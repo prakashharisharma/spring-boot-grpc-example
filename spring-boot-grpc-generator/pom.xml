@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.example</groupId>
+	<groupId>com.tutorialsdesk</groupId>
 	<artifactId>spring-boot-grpc-generator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBootGRPC</name>
@@ -10,7 +10,6 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<!-- <version>2.0.1.RELEASE</version> -->
 		<version>1.5.13.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
@@ -19,9 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-
 		<grpc-spring-boot-starter.version>2.3.2</grpc-spring-boot-starter.version>
-
 		<os-maven-plugin.version>1.6.0</os-maven-plugin.version>
 		<protobuf-maven-plugin.version>0.5.1</protobuf-maven-plugin.version>
 	</properties>
@@ -35,7 +32,7 @@
 
 	<dependencies>
 		<!-- spring-boot -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -43,7 +40,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.lognet</groupId>
 			<artifactId>grpc-spring-boot-starter</artifactId>

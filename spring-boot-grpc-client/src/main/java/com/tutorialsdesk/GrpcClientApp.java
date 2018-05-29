@@ -1,11 +1,12 @@
-package com.example;
+package com.tutorialsdesk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GrpcServerApp {
+public class GrpcClientApp {
+
 	public static void main(String[] args) {
-		SpringApplication.run(GrpcServerApp.class, args);
+		SpringApplication.run(GrpcClientApp.class, args);
 	}
 }

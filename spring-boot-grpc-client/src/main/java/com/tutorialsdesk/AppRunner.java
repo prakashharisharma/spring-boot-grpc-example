@@ -1,4 +1,4 @@
-package com.example;
+package com.tutorialsdesk;
 
 import java.util.List;
 
@@ -8,24 +8,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.example.client.StudentServiceClient;
-import com.example.studentservice.Student;
+import com.tutorialsdesk.grpc.proto.Student;
+import com.tutorialsdesk.service.StudentClientService;
+
 
 @Component
 public class AppRunner implements CommandLineRunner {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AppRunner.class);
-	
+
 	@Autowired
-	StudentServiceClient studentServiceClient;
+	private StudentClientService studentClientService;
 
 	public void run(String... arg0) throws Exception {
 
-		Student student = studentServiceClient.getStudent(1);
+		Student student = studentClientService.getStudent(1);
 		
-		LOGGER.info("RETRIEVED STUDENT BY ROLL_NUMBER : "+student);
+		LOGGER.info("RETRIEVED STUDENT BY ROLL_NUMBER :\n ");
+		
+		LOGGER.info(student.toString());
 
-		List<Student> studentList = studentServiceClient.getAllStudents();
+		List<Student> studentList = studentClientService.getAllStudents();
 
 		LOGGER.info("RETRIEVED ALL STUDETS\n");
 		
